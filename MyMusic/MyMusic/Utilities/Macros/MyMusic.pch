@@ -1,0 +1,65 @@
+//
+//  MyMusic.pch
+//  MyMusic
+//
+//  Created by 赵建钢 on 2018/2/21.
+//  Copyright © 2018年 赵建钢. All rights reserved.
+//
+
+#ifndef MyMusic_pch
+#define MyMusic_pch
+/*-----header-----*/
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "MJExtension.h"
+#import "Masonry.h"
+#import "ZJGNetWorkTool.h"
+#import "ZJGPromptTool.h"
+#import "ZJGUrl.h"
+#import "ZJGCreateTool.h"
+#import "ZJGBlurViewTool.h"
+#import "ZJGMusicIndicatorView.h"
+#import "UIView+distribute.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef DEBUG
+#define ZJGLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define ZJGLog(...)
+
+#endif
+
+/*-----screenSize-----*/
+#define ZJGScreen [[UIScreen mainScreen] bounds]
+
+#define ZJGScreenWidth ZJGScreen.size.width
+
+#define ZJGScreenHeight ZJGScreen.size.height
+
+/*-----color-----*/
+#define ZJGColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define ZJGRandomColor ZJGColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define ZJGMainColor ZJGColor(252,12,68)
+#define ZJGNumColor ZJGColor(148,145,144)
+#define ZJGTextColor ZJGColor(45,46,47)
+#define ZJGArtistColor ZJGColor(110,111,112)
+#define ZJGTintColor [ZJGMusicIndicatorView  sharedIndicatorView].tintColor
+/*-----font-----*/
+#define ZJGTitleFont [UIFont systemFontOfSize:20.0]
+#define ZJGBigFont [UIFont systemFontOfSize:15.0]
+#define ZJGMiddleFont [UIFont systemFontOfSize:13.0]
+#define ZJGSmallFont [UIFont systemFontOfSize:10.0]
+/*-----Spacing-----*/
+#define ZJGHorizontalSpacing 20
+
+#define ZJGCommonSpacing 10
+
+#define ZJGVerticalSpacing 5
+
+
+
+
+
+#endif /* MyMusic_pch */
